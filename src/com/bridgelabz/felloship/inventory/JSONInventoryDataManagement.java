@@ -22,25 +22,25 @@ public class JSONInventoryDataManagement {
 		do {
 			System.out.println("1: Add Inventory\n" + "2: Remove Inventory\n" + "3: Update Inventory\n"
 					+ "4: Search Inventory\n5: Show all Inventory\n" + "6: Exit");
-			key = operations.scanner.nextInt();
+			key = inputvalidation.isvalidInteger();
 			switch (key) {
 			case 1:
 				InventoryManager.pricemenu(); // show inventory
-				operations.add(); // add new inventory
+				operations.addInventory(); // add new inventory
 				InventoryManager.pricemenu(); // show updated inventory
 				break;
 			case 2:
 				InventoryManager.pricemenu(); // show inventory
-				operations.del(); // remove inventory
+				operations.removeInventory(); // remove inventory
 				InventoryManager.pricemenu(); // show updated inventory
 				break;
 			case 3:
 				InventoryManager.pricemenu(); // show inventory
-				operations.update(); // update inventory information
+				operations.updateInventory(); // update inventory information
 				InventoryManager.pricemenu();// show updated inventory
 				break;
 			case 4:
-				operations.search(); // search inventry
+				operations.searchInventory(); // search inventry
 				break;
 			case 5:
 				InventoryManager.pricemenu(); // show all inventory with price

@@ -1,7 +1,6 @@
 package com.bridgelabz.felloship.operations;
 
 import java.util.List;
-import java.util.Scanner;
 
 import com.bridgelabz.felloship.control.control;
 import com.bridgelabz.felloship.inventory.Product;
@@ -9,13 +8,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class operations {
 
-	public static Scanner scanner = new Scanner(System.in);
 	static ObjectMapper mapper = new ObjectMapper();
 
-	public static void del() {
+	public static void removeInventory() {
 		List<Product> lists = control.readInventory(); // read all inventory
 		System.out.println("enter product name: ");
-		String inputname = scanner.next();
+		String inputname = inputvalidation.isString();
 		try {
 			for (Product product : lists) {
 				if (product.name.equals(inputname)) { // if found then
@@ -27,26 +25,26 @@ public class operations {
 		control.writeInventory(lists); // re-write updated inventory
 	}
 
-	public static void update() {
+	public static void updateInventory() {
 		List<Product> list = control.readInventory(); // read all ininventory
 		System.out.println("enter product name: ");
-		String inputname = scanner.next();
+		String inputname = inputvalidation.isString();
 		for (Product product : list) {
 			if (product.name.equals(inputname)) {
 				System.out.println("1. Product Name\n" + "2. Price\n" + "3. Weight");
-				int choice = scanner.nextInt();
+				int choice = inputvalidation.isvalidInteger();
 				switch (choice) {
 				case 1:
 					System.out.println("new name");
-					product.setName(scanner.next()); // set new product name
+					product.setName(inputvalidation.isString()); // set new product name
 					break;
 				case 2:
 					System.out.println("new price");
-					product.setPrice(scanner.nextInt()); // set new product price
+					product.setPrice(inputvalidation.isvalidInteger()); // set new product price
 					break;
 				case 3:
 					System.out.println("change weight");
-					product.setWeight(scanner.nextInt()); // set new product weight
+					product.setWeight(inputvalidation.isvalidInteger()); // set new product weight
 					break;
 				default:
 					break;
@@ -57,22 +55,22 @@ public class operations {
 		control.writeInventory(list); // re-write updated inventory
 	}
 
-	public static void add() {
+	public static void addInventory() {
 		List<Product> array = control.readInventory(); // read all inventory
 		System.out.println("enter the product"); // main product name
-		String product = scanner.next();
+		String product = inputvalidation.isString();
 		System.out.print("enter product sub types: "); // product sub types amount
-		int productsubtypes = scanner.nextInt();
+		int productsubtypes = inputvalidation.isvalidInteger();
 		for (int i = 0; i < productsubtypes; i++) {
 			Product newproduct = new Product();
 			newproduct.setType(product); // set product type
 			System.out.println("enter the sub type" + (i + 1) + " product name");
-			newproduct.setName(scanner.next()); // set product name
+			newproduct.setName(inputvalidation.isString()); // set product name
 			System.out.println("enter the Weight: ");
-			newproduct.setWeight(scanner.nextInt()); // set product weight
+			newproduct.setWeight(inputvalidation.isvalidInteger()); // set product weight
 
 			System.out.println("enter the price per Kg: ");
-			newproduct.setPrice(scanner.nextInt()); // set product price
+			newproduct.setPrice(inputvalidation.isvalidInteger()); // set product price
 
 			array.add(newproduct); // add new product in list
 		}
@@ -80,10 +78,10 @@ public class operations {
 
 	}
 
-	public static void search() {
+	public static void searchInventory() {
 		List<Product> list = control.readInventory(); // read all inventory
 		System.out.println("enter the product");
-		String input = scanner.next();
+		String input = inputvalidation.isString();
 		for (Product product : list) {
 			if (product.name.equals(input)) { // if product found then show details
 				System.out.print("the total price is: ");
