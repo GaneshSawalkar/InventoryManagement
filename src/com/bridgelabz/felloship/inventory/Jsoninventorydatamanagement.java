@@ -3,7 +3,7 @@ package com.bridgelabz.felloship.inventory;
 import com.bridgelabz.felloship.operations.*;
 import com.bridgelabz.felloship.productmenu.*;
 
-public class JSONInventoryDataManagement {
+public class Jsoninventorydatamanagement {
 
 	public static void main(String[] args) {
 		try {
@@ -15,35 +15,35 @@ public class JSONInventoryDataManagement {
 
 	// inventory show
 	public static void menu() {
-		InventoryManager.pricemenu();
+		Inventorymanager.priceMenu();
 		System.out.println("******************Operations***************");
 
 		int key;
 		do {
 			System.out.println("1: Add Inventory\n" + "2: Remove Inventory\n" + "3: Update Inventory\n"
 					+ "4: Search Inventory\n5: Show all Inventory\n" + "6: Exit");
-			key = inputvalidation.isvalidInteger();
+			key = Inputvalidation.isvalidInteger();
 			switch (key) {
 			case 1:
-				InventoryManager.pricemenu(); // show inventory
-				operations.addInventory(); // add new inventory
-				InventoryManager.pricemenu(); // show updated inventory
+				Inventorymanager.priceMenu(); // show inventory
+				Operations.addInventory(); // add new inventory
+				Inventorymanager.priceMenu(); // show updated inventory
 				break;
 			case 2:
-				InventoryManager.pricemenu(); // show inventory
-				operations.removeInventory(); // remove inventory
-				InventoryManager.pricemenu(); // show updated inventory
+				Inventorymanager.priceMenu(); // show inventory
+				Operations.removeInventory(); // remove inventory
+				Inventorymanager.priceMenu(); // show updated inventory
 				break;
 			case 3:
-				InventoryManager.pricemenu(); // show inventory
-				operations.updateInventory(); // update inventory information
-				InventoryManager.pricemenu();// show updated inventory
+				Inventorymanager.priceMenu(); // show inventory
+				Operations.updateInventory(); // update inventory information
+				Inventorymanager.priceMenu();// show updated inventory
 				break;
 			case 4:
-				operations.searchInventory(); // search inventry
+				Operations.searchInventory(); // search inventry
 				break;
 			case 5:
-				InventoryManager.pricemenu(); // show all inventory with price
+				Inventorymanager.priceMenu(); // show all inventory with price
 				break;
 			case 6:
 				return;

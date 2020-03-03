@@ -3,7 +3,7 @@ package com.bridgelabz.felloship.operations;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class inputvalidation {
+public class Inputvalidation {
 	public static Scanner scanner = new Scanner(System.in);
 
 	public static int isvalidInteger() {

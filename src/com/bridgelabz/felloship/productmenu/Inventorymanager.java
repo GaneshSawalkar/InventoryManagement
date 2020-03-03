@@ -8,15 +8,15 @@ import com.bridgelabz.felloship.inventory.Product;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class InventoryManager {
+public class Inventorymanager {
 	// inventory path
 	public static String spath = "/home/admin1/Desktop/ganeshproject/InventoryManagement/src/com/bridgelabz/felloship/inventoryfile/inventory.json";
 
 	public static void main(String[] args) {
-		pricemenu();
+		priceMenu();
 	}
 
-	public static void pricemenu() {
+	public static void priceMenu() {
 		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("*************Inventory Menu****************");
 		List<Product> list = null;
