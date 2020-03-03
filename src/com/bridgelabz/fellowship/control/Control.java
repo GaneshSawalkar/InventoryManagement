@@ -1,10 +1,11 @@
-package com.bridgelabz.felloship.control;
+package com.bridgelabz.fellowship.control;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import com.bridgelabz.felloship.inventory.Product;
-import com.bridgelabz.felloship.productmenu.Inventorymanager;
+
+import com.bridgelabz.fellowship.inventory.Product;
+import com.bridgelabz.fellowship.productmenu.Inventorymanager;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

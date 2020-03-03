@@ -1,7 +1,7 @@
-package com.bridgelabz.felloship.inventory;
+package com.bridgelabz.fellowship.inventory;
 
-import com.bridgelabz.felloship.operations.*;
-import com.bridgelabz.felloship.productmenu.*;
+import com.bridgelabz.fellowship.operations.*;
+import com.bridgelabz.fellowship.productmenu.*;
 
 public class Jsoninventorydatamanagement {
 

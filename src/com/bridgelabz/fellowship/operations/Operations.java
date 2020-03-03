@@ -1,9 +1,9 @@
-package com.bridgelabz.felloship.operations;
+package com.bridgelabz.fellowship.operations;
 
 import java.util.List;
 
-import com.bridgelabz.felloship.control.Control;
-import com.bridgelabz.felloship.inventory.Product;
+import com.bridgelabz.fellowship.control.Control;
+import com.bridgelabz.fellowship.inventory.Product;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Operations {

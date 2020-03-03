@@ -1,10 +1,10 @@
-package com.bridgelabz.felloship.productmenu;
+package com.bridgelabz.fellowship.productmenu;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import com.bridgelabz.felloship.inventory.Product;
+import com.bridgelabz.fellowship.inventory.Product;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

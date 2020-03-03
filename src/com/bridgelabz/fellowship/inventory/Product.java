@@ -1,4 +1,4 @@
-package com.bridgelabz.felloship.inventory;
+package com.bridgelabz.fellowship.inventory;
 
 public class Product {
 	public String type;

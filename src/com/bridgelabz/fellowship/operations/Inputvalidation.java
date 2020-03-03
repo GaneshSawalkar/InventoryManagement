@@ -1,4 +1,4 @@
-package com.bridgelabz.felloship.operations;
+package com.bridgelabz.fellowship.operations;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
